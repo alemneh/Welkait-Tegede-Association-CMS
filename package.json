@@ -1,0 +1,27 @@
+{
+  "name": "welkait-tegede-association-cms",
+  "version": "1.0.0",
+  "description": "Content management system for non-profit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alemneh/Welkait-Tegede-Association-CMS.git"
+  },
+  "author": "alemneh asefa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alemneh/Welkait-Tegede-Association-CMS/issues"
+  },
+  "homepage": "https://github.com/alemneh/Welkait-Tegede-Association-CMS#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.20"
+  }
+}
