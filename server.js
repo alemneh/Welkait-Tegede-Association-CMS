@@ -12,9 +12,10 @@ app.use(bodyParser.json());
 
 require('./routes/user-routes')(userRouter, models);
 require('./routes/payment-routes')(paymentRouter, models);
+require('./routes/remittance-routes')(remittanceRouter, models);
 
-app.use('/', paymentRouter);
-app.use('/', userRouter);
+app.use('/', paymentRouter, userRouter, remittanceRouter);
+
 
 
 app.listen(3000, () => {
