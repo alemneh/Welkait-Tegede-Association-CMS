@@ -5,7 +5,7 @@ let models = {};
 
 require('./user')(mongoose, models);
 require('./payment')(mongoose, models);
-require('./history')(mongoose, models);
+require('./activity')(mongoose, models);
 require('./remittance')(mongoose, models);
 require('./admin')(mongoose, models);
 

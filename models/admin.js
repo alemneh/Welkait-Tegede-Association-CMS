@@ -7,7 +7,7 @@ module.exports = function(mongoose, models) {
   const adminSchema = new mongoose.Schema({
     name: String,
     password: String,
-    history: [{type: Schema.Types.ObjectId, ref:'History' }]
+    activity: [{type: Schema.Types.ObjectId, ref:'Activity' }]
   });
 
   adminSchema.pre('save', function(next) {
@@ -17,7 +17,7 @@ module.exports = function(mongoose, models) {
 
   //userSchema.methods.hashPassword
   adminSchema.methods.compareHash = function(password) {
-    return bcrypt.comareSync(password, this.password);
+    return bcrypt.compareSync(password, this.password);
   };
 
   adminSchema.methods.generateToken = function() {
