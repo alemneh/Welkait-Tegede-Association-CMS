@@ -7,7 +7,7 @@ module.exports = function(mongoose, models) {
     admin: Boolean,
     dues: [{type: Schema.Types.ObjectId, ref:'Payment' }],
     role: String,
-    committee: Boolean,
+    committee: String,
     volunteer: Boolean,
     email: String,
     telephone: Number,

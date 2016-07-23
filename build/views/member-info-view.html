@@ -1,0 +1,14 @@
+<section data-ng-init="memberCtrl.getMemberInfo()" data-ng-controller="MemberController as memberCtrl" class="container">
+  <div class="">
+    <p>Name: {{memberCtrl.memberInfo.name}}</p>
+    <p>Address: {{memberCtrl.memberInfo.street}} {{memberCtrl.memberInfo.city}}
+                {{memberCtrl.memberInfo.state}} {{memberCrtl.memberInfo.zipCode}}</p>
+    <p>Phone: {{memberCtrl.memberInfo.telephone}}</p>
+    <p>Past Dues: $45.00</p>
+  </div>
+  <div class="btn-group btn-group-justified">
+  <a href="#" class="btn btn-default">Edit</a>
+  <a href="#" class="btn btn-default">Payments</a>
+  <a data-ng-click="memberCtrl.removeMember(memberCtrl.memberInfo)" class="btn btn-default">Delete</a>
+</div>
+</section>

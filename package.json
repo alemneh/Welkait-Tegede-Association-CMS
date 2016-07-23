@@ -18,11 +18,23 @@
   },
   "homepage": "https://github.com/alemneh/Welkait-Tegede-Association-CMS#readme",
   "dependencies": {
+    "angular": "^1.5.7",
     "angular-ui-router": "^0.3.1",
     "bcrypt": "^0.8.6",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "jsonwebtoken": "^7.0.0",
     "mongoose": "^4.4.20"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-webpack": "^1.5.0",
+    "webpack-stream": "^3.2.0"
   }
 }

@@ -1,0 +1,81 @@
+<section data-ng-controller="MemberController as memberCtrl" class="container">
+  <form data-ng-submit="memberCtrl.createMember(newMember)"class="form-horizontal">
+    <fieldset>
+      <legend>New Member Form</legend>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.name" type="text" class="form-control" id="inputName" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPhoneNumber" class="col-lg-2 control-label">Phone</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.telephone" type="number" class="form-control" id="inputPhoneNumber" placeholder="Phone">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress" class="col-lg-2 control-label">Address</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.street" type="text" class="form-control" id="inputAddress" placeholder="Address">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCity" class="col-lg-2 control-label">City</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.city" type="text" class="form-control" id="inputCity" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputState" class="col-lg-2 control-label">State</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.state" type="text" class="form-control" id="inputState" placeholder="State">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputZipCode" class="col-lg-2 control-label">Zip Code</label>
+        <div class="col-lg-10">
+          <input data-ng-model="newMember.zipCode" type="text" class="form-control" id="inputZipCode" placeholder="Zip Code">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="selectVolunteer" class="col-lg-2 control-label">Volunteer</label>
+        <div class="col-lg-10">
+        <select data-ng-model="newMember.volunteer" class="form-control" id="selectVolunteer">
+          <option value="">-- choose an option --</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="selectRole" class="col-lg-2 control-label">Role</label>
+        <div class="col-lg-10">
+        <select data-ng-model="newMember.role" class="form-control" id="selectRole">
+          <option value="">-- choose an option --</option>
+          <option>Member</option>
+          <option>Committee</option>
+        </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="selectCommittee" class="col-lg-2 control-label">Committee</label>
+        <div class="col-lg-10">
+        <select data-ng-model="newMember.committee" class="form-control" id="selectCommittee">
+          <option value="">-- choose an option --</option>
+          <option>Chairman</option>
+          <option>Vic Chairman</option>
+          <option>Treasurer</option>
+          <option>Secretary</option>
+        </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="reset" class="btn btn-default">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</section>

@@ -19,6 +19,13 @@ require('./routes/payment-routes')(paymentRouter, models);
 require('./routes/remittance-routes')(remittanceRouter, models);
 require('./routes/activity-routes')(activityRouter, models);
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, authorization, token');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  next();
+});
+
 
 app.use('/', paymentRouter, userRouter, remittanceRouter,
         loginRouter, adminRouter, activityRouter);

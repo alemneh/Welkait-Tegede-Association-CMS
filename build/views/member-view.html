@@ -1,0 +1,11 @@
+<section data-ng-controller="MemberController as memberCtrl" class="container">
+  <div data-ng-init="memberCtrl.getAllMembers()" class="list-group">
+    <a  class="list-group-item active">
+      Members
+    </a>
+    <a data-ng-repeat="member in memberCtrl.members"
+       data-ng-click="memberCtrl.getOneMember(member)" class="list-group-item">{{member.name}}
+    </a>
+  </div>
+  <p data-ng-if="!memberCtrl.members.length">No members added yet. <a href="#/members/add"> Add Members</a></p>
+</section>
