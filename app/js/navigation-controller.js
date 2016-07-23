@@ -2,18 +2,7 @@
 
 module.exports = function(app) {
 
-  app.run(['$rootScope', '$location', '$route', '$window', function($rootScope, $location, $route, $window) {
-      $rootScope.$on('$locationChangeStart', function(event) {
-        var nextRoute = $route.routes[$location.path()];
-        if(nextRoute.requireLogin) {
-          if(!$window.localStorage.token) {
-            event.preventDefault();
-            $location.path('/');
-          }
-        }
-      });
-    }])
-  .controller('NavController', ['AuthService', '$window', '$location', '$route',
+  app.controller('NavController', ['AuthService', '$window', '$location', '$route',
   function(AuthService, $window, $location, $route) {
     let _this = this;
     _this.signedIn = false;
@@ -38,7 +27,7 @@ module.exports = function(app) {
           _this.signedIn = true;
           _this.signedOut = false;
           $location.path('/home');
-          $window.location.reload();
+
         }
 
       });

@@ -1,10 +1,9 @@
-(function() {
   'use strict';
 
   module.exports = (app) => {
-    app.controller('RemittanceController', ['$http', RemittanceController]);
+    app.controller('RemittanceController', ['$http', function($http) {
 
-    function RemittanceController($http) {
+
       let vm = this;
       let port = 'http://localhost:3000';
 
@@ -47,9 +46,6 @@
       };
 
 
-    }
+    
+    }]);
   };
-
-
-
-})();

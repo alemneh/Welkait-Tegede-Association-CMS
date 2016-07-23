@@ -1,6 +1,6 @@
 'use strict';
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://alemneh:gondar@ds027215.mlab.com:27215/welkait-tegede-cms');
+mongoose.connect(process.env.MONGO_URI);
 let models = {};
 
 require('./user')(mongoose, models);
