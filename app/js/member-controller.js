@@ -6,9 +6,9 @@
 
 
       let vm = this;
-    
-      let port = process.env.PORT || 'http://localhost:3000';
-      console.log(process.env.PORT);
+      let port = 'https://welkait-tegede.herokuapp.com';
+      // let port = 'http://localhost:3000';
+
 
       //Main data
       vm.members = [];

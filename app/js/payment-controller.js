@@ -1,10 +1,9 @@
-(function() {
   'use strict';
 
   module.exports = (app) => {
-    app.controller('PaymentController', ['$http', PaymentController]);
+    app.controller('PaymentController', ['$http', function($http) {
 
-    function PaymentController($http) {
+
       let vm = this;
       let port = 'http://localhost:3000';
 
@@ -47,9 +46,6 @@
       };
 
 
-    }
+
+    }]);
   };
-
-
-
-})();
