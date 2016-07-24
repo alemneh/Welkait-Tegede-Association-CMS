@@ -10,6 +10,7 @@ let activityRouter = express.Router();
 let loginRouter = express.Router();
 let adminRouter = express.Router();
 var port = process.env.PORT || 3000;
+console.log(process.env.PORT);
 
 app.use(bodyParser.json());
 
