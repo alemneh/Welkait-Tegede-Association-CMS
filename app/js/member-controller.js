@@ -6,7 +6,9 @@
 
 
       let vm = this;
-      let port = 'http://localhost:3000';
+      let port =
+      let port = process.env.PORT || 'http://localhost:3000';
+      console.log(process.env.PORT);
 
       //Main data
       vm.members = [];

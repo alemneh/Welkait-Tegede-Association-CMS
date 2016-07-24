@@ -63,7 +63,7 @@
 	
 	  // CONTROLLERS
 	  __webpack_require__(6)(app);
-	  __webpack_require__(7)(app);
+	  __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./member-controller\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))(app);
 	})();
 
 /***/ },
@@ -31714,67 +31714,6 @@
 	        _this.signedIn = false;
 	        _this.signedOut = true;
 	        $location.path('/');
-	      });
-	    };
-	  }]);
-	};
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = function (app) {
-	  app.controller('MemberController', ['$http', '$location', '$window', function ($http, $location, $window) {
-	
-	    var vm = this;
-	    var port = 'http://localhost:3000';
-	
-	    //Main data
-	    vm.members = [];
-	    vm.getMemberInfo = function () {
-	      vm.memberInfo = JSON.parse($window.localStorage.member);
-	    };
-	
-	    vm.getAllMembers = function () {
-	      $http.get(port + '/members').then(function (res) {
-	        console.log(res);
-	        vm.members = res.data.data;
-	      }, function (err) {
-	        return console.log(err);
-	      });
-	    };
-	
-	    vm.getOneMember = function (member) {
-	      $window.localStorage.member = JSON.stringify(member);
-	      console.log($window.localStorage.member);
-	      $location.path('/members/info');
-	    };
-	
-	    vm.createMember = function (newMember) {
-	      $http.post(port + '/members', newMember).then(function (res) {
-	        console.log(res);
-	        $location.path('/members/view');
-	      }, function (err) {
-	        return console.log(err);
-	      });
-	    };
-	
-	    vm.updateMember = function (updatedMember) {
-	      $http.put(port + '/members/' + updatedMember._id, updatedMember).then(function (res) {
-	        console.log(res);
-	      }, function (err) {
-	        return console.log(err);
-	      });
-	    };
-	
-	    vm.removeMember = function (member) {
-	      $http.delete(port + '/members/' + member._id).then(function (res) {
-	        console.log(res);
-	        $location.path('/members/view');
-	      }, function (err) {
-	        return console.log(err);
 	      });
 	    };
 	  }]);
