@@ -27,6 +27,7 @@ module.exports = function(app) {
           _this.signedIn = true;
           _this.signedOut = false;
           $location.path('/home');
+          $window.location.reload();
 
         }
 
