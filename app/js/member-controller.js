@@ -6,7 +6,7 @@
 
 
       let vm = this;
-      let port =
+    
       let port = process.env.PORT || 'http://localhost:3000';
       console.log(process.env.PORT);
 
