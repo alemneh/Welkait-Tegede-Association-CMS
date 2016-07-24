@@ -20,6 +20,8 @@ require('./routes/payment-routes')(paymentRouter, models);
 require('./routes/remittance-routes')(remittanceRouter, models);
 require('./routes/activity-routes')(activityRouter, models);
 
+app.use(express.static(__dirname + '/build'));
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://welkait-tegede.herokuapp.com');
   res.header('Access-Control-Allow-Headers', 'Content-Type, authorization, token');
